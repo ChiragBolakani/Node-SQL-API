@@ -1,0 +1,964 @@
+{
+	"info": {
+		"_postman_id": "a2d6eb80-4185-457a-9bc9-7188674cacba",
+		"name": "BlogAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "validation",
+			"item": [
+				{
+					"name": "createPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Express Totorial\",\r\n    \"description\" : \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/authors/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"authors",
+								"posts"
+							]
+						},
+						"description": "Cannot create as authorID is not specified"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\" : \"Express Totorial\",\r\n    \"description\" : \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/authors/posts",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"authors",
+										"posts"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3f-iG/mb1T/kLxaRioChtHHSD6zHcU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 14:16:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": {\n        \"status\": 400,\n        \"message\": \"Content can not be empty!\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getPostsbyAuthorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/authors/50/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"authors",
+								"50",
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getPostsbyAuthorID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/authors/50/posts",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"authors",
+										"50",
+										"posts"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "62"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3e-oBCtSxgVGjcVQqFa5F2r2Fp4Cvs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 13:42:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": {\n        \"status\": 404,\n        \"message\": \"Could not find any posts\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updatePost",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Rest API Tutorial\",\r\n    \"description\" : \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/authors/3/posts/47",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"authors",
+								"3",
+								"posts",
+								"47"
+							]
+						},
+						"description": "Cannot update as author with id=3 does not have any post with id=47"
+					},
+					"response": [
+						{
+							"name": "updatePost",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\" : \"Rest API Tutorial\",\r\n    \"description\" : \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/authors/3/posts/47",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"authors",
+										"3",
+										"posts",
+										"47"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3a-o/JnjaL70r4NUYh5lFf9bVE35fA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 13:51:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": {\n        \"status\": 404,\n        \"message\": \"Could not find post.\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updatePost",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Data Science for Beginners\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/authors/1/posts/47",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"authors",
+								"1",
+								"posts",
+								"47"
+							]
+						},
+						"description": "Cannot update as all fields are not specified"
+					},
+					"response": [
+						{
+							"name": "updatePost",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\" : \"Data Science for Beginners\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/authors/1/posts/47",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"authors",
+										"1",
+										"posts",
+										"47"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3f-iG/mb1T/kLxaRioChtHHSD6zHcU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 13:57:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": {\n        \"status\": 400,\n        \"message\": \"Content can not be empty!\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "detelePost",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/authors/1/posts/39",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"authors",
+								"1",
+								"posts",
+								"39"
+							]
+						},
+						"description": "Cannot delete as author with id=1 does not have any posts with id=39"
+					},
+					"response": [
+						{
+							"name": "deletePost",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/authors/1/posts/39",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"authors",
+										"1",
+										"posts",
+										"39"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "57"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"39-sAiCqeRv3ned8Vk3MDhoNELrpjA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 14:00:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": {\n        \"status\": 404,\n        \"message\": \"Could Not find Post\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "getAllPosts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getAllPosts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2252"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8cc-Uogpl76HcVnuU3o4vf8v4xu5pzg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Dec 2021 13:23:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"data\": [\n        {\n            \"authorID\": 1,\n            \"authorFirstName\": \"Chirag\",\n            \"authorLastName\": \"Bolakani\",\n            \"authorEmail\": \"chiragbolakani@gmail.com\",\n            \"postID\": 1,\n            \"postTitle\": \"MongoDB Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\n        },\n        {\n            \"authorID\": 3,\n            \"authorFirstName\": \"Dharmin\",\n            \"authorLastName\": \"Chothani\",\n            \"authorEmail\": \"dharmin@mail.com\",\n            \"postID\": 26,\n            \"postTitle\": \"Python Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\n        },\n        {\n            \"authorID\": 2,\n            \"authorFirstName\": \"Nayan\",\n            \"authorLastName\": \"Bhatia\",\n            \"authorEmail\": \"nayan@mail.com\",\n            \"postID\": 28,\n            \"postTitle\": \"Java Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\n        },\n        {\n            \"authorID\": 1,\n            \"authorFirstName\": \"Chirag\",\n            \"authorLastName\": \"Bolakani\",\n            \"authorEmail\": \"chiragbolakani@gmail.com\",\n            \"postID\": 31,\n            \"postTitle\": \"Kotlin Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\n        },\n        {\n            \"authorID\": 3,\n            \"authorFirstName\": \"Dharmin\",\n            \"authorLastName\": \"Chothani\",\n            \"authorEmail\": \"dharmin@mail.com\",\n            \"postID\": 32,\n            \"postTitle\": \"OOPS Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "getAllPosts (pagination)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/posts?limit=10&offset=0",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getAllPosts (pagination)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/posts?limit=10&offset=0",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"posts"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4474"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"117a-5rQnv9rablQy1GChHV6M/5iqw8E\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Dec 2021 13:26:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"data\": [\n        {\n            \"authorID\": 1,\n            \"authorFirstName\": \"Chirag\",\n            \"authorLastName\": \"Bolakani\",\n            \"authorEmail\": \"chiragbolakani@gmail.com\",\n            \"postID\": 1,\n            \"postTitle\": \"MongoDB Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\n        },\n        {\n            \"authorID\": 3,\n            \"authorFirstName\": \"Dharmin\",\n            \"authorLastName\": \"Chothani\",\n            \"authorEmail\": \"dharmin@mail.com\",\n            \"postID\": 26,\n            \"postTitle\": \"Python Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\n        },\n        {\n            \"authorID\": 2,\n            \"authorFirstName\": \"Nayan\",\n            \"authorLastName\": \"Bhatia\",\n            \"authorEmail\": \"nayan@mail.com\",\n            \"postID\": 28,\n            \"postTitle\": \"Java Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\n        },\n        {\n            \"authorID\": 1,\n            \"authorFirstName\": \"Chirag\",\n            \"authorLastName\": \"Bolakani\",\n            \"authorEmail\": \"chiragbolakani@gmail.com\",\n            \"postID\": 31,\n            \"postTitle\": \"Kotlin Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\n        },\n        {\n            \"authorID\": 3,\n            \"authorFirstName\": \"Dharmin\",\n            \"authorLastName\": \"Chothani\",\n            \"authorEmail\": \"dharmin@mail.com\",\n            \"postID\": 32,\n            \"postTitle\": \"OOPS Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\n        },\n        {\n            \"authorID\": 1,\n            \"authorFirstName\": \"Chirag\",\n            \"authorLastName\": \"Bolakani\",\n            \"authorEmail\": \"chiragbolakani@gmail.com\",\n            \"postID\": 33,\n            \"postTitle\": \"Web Dev Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\n        },\n        {\n            \"authorID\": 2,\n            \"authorFirstName\": \"Nayan\",\n            \"authorLastName\": \"Bhatia\",\n            \"authorEmail\": \"nayan@mail.com\",\n            \"postID\": 34,\n            \"postTitle\": \"PHP Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\n        },\n        {\n            \"authorID\": 1,\n            \"authorFirstName\": \"Chirag\",\n            \"authorLastName\": \"Bolakani\",\n            \"authorEmail\": \"chiragbolakani@gmail.com\",\n            \"postID\": 36,\n            \"postTitle\": \"NodeJS Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\n        },\n        {\n            \"authorID\": 3,\n            \"authorFirstName\": \"Dharmin\",\n            \"authorLastName\": \"Chothani\",\n            \"authorEmail\": \"dharmin@mail.com\",\n            \"postID\": 37,\n            \"postTitle\": \"SQL Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\n        },\n        {\n            \"authorID\": 2,\n            \"authorFirstName\": \"Nayan\",\n            \"authorLastName\": \"Bhatia\",\n            \"authorEmail\": \"nayan@mail.com\",\n            \"postID\": 38,\n            \"postTitle\": \"Django Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "getPostsByAuthorID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/authors/1/posts/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authors",
+						"1",
+						"posts",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getPostsByAuthorID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/authors/1/posts/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"authors",
+								"1",
+								"posts",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2171"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"87b-+xgr/uOBFGwgJcDerN8lXhnTG/g\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Dec 2021 13:40:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"data\": [\n        {\n            \"postID\": 1,\n            \"postTitle\": \"MongoDB Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\",\n            \"authorID\": 1\n        },\n        {\n            \"postID\": 31,\n            \"postTitle\": \"Kotlin Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\",\n            \"authorID\": 1\n        },\n        {\n            \"postID\": 33,\n            \"postTitle\": \"Web Dev Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\",\n            \"authorID\": 1\n        },\n        {\n            \"postID\": 36,\n            \"postTitle\": \"NodeJS Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\",\n            \"authorID\": 1\n        },\n        {\n            \"postID\": 43,\n            \"postTitle\": \"Deep Learning Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\",\n            \"authorID\": 1\n        },\n        {\n            \"postID\": 47,\n            \"postTitle\": \"NodeMailer Tutorial\",\n            \"postDescription\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\",\n            \"authorID\": 1\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "createPost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"NodeMailer Tutorial\",\r\n    \"description\" : \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\",\r\n    \"authorID\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/authors/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authors",
+						"posts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "createPost",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"NodeMailer Tutorial\",\r\n    \"description\" : \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\",\r\n    \"authorID\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/authors/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"authors",
+								"posts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "403"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"193-B9i1Bvc9tsKQH1cqeSPwNX2ojO4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Dec 2021 13:30:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"data\": {\n        \"id\": 47,\n        \"title\": \"NodeMailer Tutorial\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\",\n        \"authorID\": 1,\n        \"message\": \"Successfully inserted\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "updatePost",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"ASP .NET Tutorial\",\r\n    \"description\" : \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/authors/3/posts/39",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authors",
+						"3",
+						"posts",
+						"39"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "updatePost",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"ASP .NET Tutorial\",\r\n    \"description\" : \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/authors/3/posts/39",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"authors",
+								"3",
+								"posts",
+								"39"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "389"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"185-HEyrkAttJeYrskr79CyMp+8vD1A\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Dec 2021 13:55:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"data\": {\n        \"id\": \"39\",\n        \"title\": \"ASP .NET Tutorial\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.\",\n        \"message\": \"successfully updated\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "deletePost",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/authors/1/posts/41",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authors",
+						"1",
+						"posts",
+						"41"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "deletePost",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/authors/1/posts/41",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"authors",
+								"1",
+								"posts",
+								"41"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "57"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"39-CzxaJfoPSWKXFm+npUfLnOkVBjM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Dec 2021 13:35:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Post was deleted successfully!\"\n}"
+				}
+			]
+		}
+	]
+}
