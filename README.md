@@ -1,7 +1,7 @@
 # Node-SQL-API
 
 ## Installation
-- Run the command below in order to install the required npm modules
+- Run the command below in order to clone this repository and install the required npm modules
 ```
 git clone https://github.com/ChiragBolakani/Node-SQL-API.git
 cd Node-SQL-API
@@ -61,4 +61,29 @@ TRANSPORTER_SENDER = user@mail.com
 }
 ```
 
+## Get Posts by authorID
+
+### Request
+`GET http://localhost:3000/authors/1/posts/`
+
+### Response
+```json
+{
+  "status": 200,
+  "data": [
+    {
+      "postID": 1,
+      "postTitle": "MongoDB Tutorial",
+      "postDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.",
+      "authorID": 1
+    },
+    {
+      "postID": 31,
+      "postTitle": "Kotlin Tutorial",
+      "postDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.",
+      "authorID": 1
+    }
+  ]
+}
+```
 More Documentation Incoming....
