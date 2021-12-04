@@ -33,6 +33,9 @@ TRANSPORTER_SENDER = user@mail.com
 
 ### Request
 `GET http://localhost:3000/posts`
+- This route also takes in additional query parameters such as `limit`and `offset` to enable pagination.
+- For example :- 
+`GET http://localhost:3000/posts?limit=5&offset=0`
 
 ### Response
 ```json
@@ -142,7 +145,15 @@ TRANSPORTER_SENDER = user@mail.com
 }
 ```
 
+## Delete Post
 
+### Request 
+`DELETE http://localhost:3000/author/1/posts/33`
 
-
-More Documentation Incoming....
+### Response
+```json
+{
+  "status": 200,
+  "message": "Post was deleted successfully!"
+}
+```
