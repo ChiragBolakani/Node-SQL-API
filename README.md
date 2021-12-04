@@ -86,4 +86,63 @@ TRANSPORTER_SENDER = user@mail.com
   ]
 }
 ```
+
+## Create Post
+
+### Request
+`POST http://localhost:3000/authors/posts/`
+
+#### Request Body
+```json
+{
+"title" : "NodeJS Tutorial",
+"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.",
+"authorID" : 1
+}
+```
+### Response
+```json
+{
+  "status": 200,
+  "data": {
+    "id": 48,
+    "title": "NodeJS Tutorial",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.",
+    "authorID": 1,
+    "message": "Successfully inserted"
+  }
+}
+```
+
+## Update Post
+
+### Request 
+`PUT http://localhost:3000/authors/1/posts/1`
+
+#### Request Body
+
+```json
+
+{
+"title" : "MongoDB Tutorial",
+"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit."
+}
+```
+
+### Response
+```json
+{
+  "status": 200,
+  "data": {
+    "id": "1",
+    "title": "MongoDB Tutorial",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Mauris commodo quis imperdiet massa. Elit at imperdiet dui accumsan sit.",
+    "message": "successfully updated"
+  }
+}
+```
+
+
+
+
 More Documentation Incoming....
