@@ -20,7 +20,7 @@ TRANSPORTER_PASS = userpas@mail.com
 TRANSPORTER_SENDER = user@mail.com
 ```
 
-## Setup
+## Run
 - Run the command below to start the Server with Nodemon
 
 ```
