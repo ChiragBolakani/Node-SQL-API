@@ -29,6 +29,7 @@ TRANSPORTER_SENDER = user@mail.com
 
 ## SQL Tables and Postman Collection
 - The SQL tables can be found [here](./Tables)
+- Postman collection - [Collection](./Postman)
    
 # REST API
 
