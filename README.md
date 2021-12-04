@@ -3,6 +3,8 @@
 ## Installation
 - Run the command below in order to install the required npm modules
 ```
+git clone https://github.com/ChiragBolakani/Node-SQL-API.git
+cd Node-SQL-API
 npm install
 ```
 
