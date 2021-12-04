@@ -26,6 +26,9 @@ TRANSPORTER_SENDER = user@mail.com
 ```
     npm run server
 ```
+
+## SQL Tables and Postman Collection
+- The SQL tables can be found [here](./Tables)
    
 # REST API
 
